@@ -1,0 +1,121 @@
+
+
+  <div class="tagBar">
+    <p class="tagBarTag">Javascript</p>
+    <p class="tagBarTag">MongoDB</p>
+    <p class="tagBarTag">Express</p>
+    <p class="tagBarTag">Angular</p>
+    <p class="tagBarTag">Node</p>
+    <p class="tagBarTag">Python</p>
+    <p class="tagBarTag">APIs</p>
+    <p class="tagBarTag">React</p>
+    <p class="tagBarTag">TDD</p>
+    <p class="tagBarTag">JQuery</p>
+    <p class="tagBarTag">Ruby</p>
+    <p class="tagBarTag">Java</p>
+    <p class="tagBarTag">Android</p>
+    <p class="tagBarTag">Sql</p>
+    <p class="tagBarTag">Swift</p>
+    <p class="tagBarTag">iphone</p>
+    <p class="tagBarTag">linux</p>
+    <p class="tagBarTag">django</p>
+    <p class="tagBarTag">c sharp</p>
+    <p class="tagBarTag">.net</p>
+    <p class="tagBarTag">objective c</p>
+    <p class="tagBarTag">data analysis</p>
+  </div>
+
+  <hr>
+
+  <!-- Header -->
+  <div class="header">Join A Project</div>
+
+
+  <!-- Companies and Projects Header-->
+<!-- 
+  <div class="background" >
+
+
+    <! Ng-Repeat of Companies & Projects Rows-->
+<!--     <div class="companyAndProjectRepeatContainer">
+
+      <div class="row companyAndProjectRepeat" ng-repeat="company in companies | filter: {projTitle:searchBar} track by $index"> -->
+          <!-- Logo -->
+          
+      <!--     <div class="logo">
+           <img ng-src="http://placekitten.com/g/60/60"/>
+          </div>
+       -->
+       <!-- Company Name & Location -->
+       <!-- Same column as logo -->
+      
+<!--         <div class="info">
+          <div class="projCompany">{{company.projCompany}}</div>
+          <div class="projTitle">{{company.projTitle}}</div>
+          <div class="projDescription">{{company.projDescription.desc}}</div>
+          <div class="tag">
+            <div>Angular</div>
+            <div>bootstrap</div>
+            <div>node</div>
+            <div>express</div>
+          </div>
+        </div>
+
+      </div>
+      <!  End of Row -->
+<!-- 
+  </div>
+</div>
+</div> --> 
+
+
+      
+<div ng-repeat='list in projectArray track by $index'>
+  <div class="panel panel-default">
+  
+    <a class="panel-heading" ui-sref='project({id: list._id})'>Name: {{list.name}}</a>
+    <div class="panel-body">
+      Description: {{list.description}}
+    </div>
+    <div>
+    Company: <img class="image-project" ng-src="{{list.image}}">
+    </div>
+
+    <button ng-click='removeProject($index)'>
+      <i class="fa fa-trash" aria-hidden="true"></i>
+    </button>
+
+  </div>
+</div>
+
+
+    
+
+
+
+      <div class="page-header">
+      </div>
+
+      <!-- render projects here -->
+
+      <form ng-submit="addProject()">
+        <h3>Add a new project</h3>
+
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Project Name" ng-model="name"></input>
+        </div>
+
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Add Description" ng-model="description"></input>
+        </div>
+
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Image URL" ng-model="image"></input>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Post</button>
+      </form>
+    </div>
+  </div>
+
+

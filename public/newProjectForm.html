@@ -1,0 +1,99 @@
+<!-- Below: Everything Commented out is from Jan 14 -->
+
+<!-- 
+<div>
+
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <h1 class="text-center">projects</h1>
+
+      <div class="companyAndProjectRepeatContainer">
+
+      <div class="row companyAndProjectRepeat" ng-repeat="company in companies track by $index">
+         <! Logo -->
+      <!--     
+          <div class="logo">
+           <img ng-src="http://placekitten.com/g/60/60"/>
+          </div>
+       -->    
+       
+       <!-- Company Name & Location -->
+       <!-- Same column as logo -->
+      
+      <!--   <div class="info">
+          <div class="projCompany">{{company.projCompany}}</div>
+          <div class="projTitle">{{company.projTitle}}</div>
+          <div class="projDescription">{{company.projDescription.desc}}</div>
+           <a ng-click="readmore()">Read More</a>
+        </div>
+        
+
+      </div> -->
+      <!--  End of Row -->
+
+<!-- <!  </div>
+
+        <div class="projectList">
+  
+
+          <div class="content-container">
+            <p class="project-name" >
+          </div>
+         <!  <i ng-click="removeProject($index)" class="fa fa-times remove"></i> -->
+        <!-- </div>
+     
+<hr>
+      <form>
+        <h3>Add a new project</h3>
+
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Project Name" ng-model="name"/>
+        </div>
+
+        <div class="form-group">
+          <input type="date" class="form-control" placeholder="Due date" ng-model="date"/>
+        </div>
+
+        <div class="form-group">
+          <textarea type="text" class="form-control" rows="10" placeholder="project description" ng-model="description"></textarea>
+        </div>
+
+        <div class="form-group">
+          <input type="file" class="form-control" placeholder="Upload a file" ng-model="image_url" id="files"/>
+          <img id="image" style="max-width: 200px;" />
+        </div>
+ -->
+<!--         <button type="submit" class="btn btn-primary">Add</button>
+      </form>
+    </div>
+  </div>
+
+ -->
+<!-- </div> --> 
+
+<!-- Below: Code Added Jan 14 -->
+
+<div class="page-header">
+  <a href="/#/home">back</a>
+
+  <div>
+    <h3>
+      <span>{{project.name}}</span>
+      <span>{{project.submission}}
+      <img class="image-project" src="{{project.image}}">
+
+      <hr>
+        <h4>Submissions</h4>
+          <div ng-repeat="submission in project.submissions">
+            <h4>{{submission.name}}</h4>
+            <p>{{submission.text}}</p>
+      </div>
+      </hr>
+
+    <input type="text" placeholder="Submit Project" ng-model="submissionText">
+    <button class="btn btn-primary" ng-click="addSubmission()">Submit</button>
+    </h3>
+  </div>
+</div>
+
+
